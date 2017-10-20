@@ -1,0 +1,8 @@
+<h1>
+  {{title}} 
+</h1>
+
+<div *ngFor="let nick of videoList">
+ <a href="{{nick.slug}}" *ngIf="nick.slug == 'item-1' ">{{nick.name}}</a>
+ <a href="{{nick.slug}}" *ngIf="nick.slug != 'item-1' "  style="color:red" >{{nick.name}}</a>
+</div>
