@@ -2,10 +2,22 @@
 
   <p>
     This is the Data Component!
+    
   </p>
 
+ 
   <div class="test2">
     <p>Data should be here</p>
+    <h6 *ngFor="let test of response">{{test.name}}</h6>
+    <h2>{{response[0].name}}</h2>
   </div>
   
+  
+
+  <!--ngmodel example  -->
+
+<input type="text" [(ngModel)] = "name">
+
+<h4>Your input is: {{name}}</h4>
+
 </div>
