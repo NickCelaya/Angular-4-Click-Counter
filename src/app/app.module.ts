@@ -8,9 +8,11 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { VideoListComponent } from './components/video-list/video-list.component';
 import { DataComponent } from './components/data/data.component';
+import { StarwarsComponent } from './components/starwars/starwars.component'
 
 //services
-import {DataService} from "./services/data.service"
+import { DataService } from "./services/data.service";
+import { StarwarsService } from "./services/starwars.service"
 
 
 @NgModule({
@@ -20,6 +22,7 @@ import {DataService} from "./services/data.service"
     AppComponent,
     VideoListComponent,
     DataComponent,
+    StarwarsComponent,
   ],
 
   //modules
@@ -31,7 +34,8 @@ import {DataService} from "./services/data.service"
 
   //services
   providers: [
-    DataService
+    DataService,
+    StarwarsService
   ],
 
   bootstrap: [AppComponent]

@@ -30,10 +30,10 @@ export class DataComponent implements OnInit {
     this.info = this.DataService.getData()
       .subscribe( (response) => {
         this.response = response
-        console.log("Got Data")
+        // console.log("Got Data")
       }, (error) => {
         this.error = error
-        console.log("No Data")
+        // console.log("No Data")
       })
   }
 
