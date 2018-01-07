@@ -1,19 +1,31 @@
 //modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule} from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 //components
 import { AppComponent } from './app.component';
 import { VideoListComponent } from './components/video-list/video-list.component';
 import { DataComponent } from './components/data/data.component';
-import { StarwarsComponent } from './components/starwars/starwars.component'
+import { StarwarsComponent } from './components/starwars/starwars.component';
 
 //services
 import { DataService } from "./services/data.service";
-import { StarwarsService } from "./services/starwars.service"
+import { StarwarsService } from "./services/starwars.service";
 
+//routes.. app routes comes from imports array where RouterModule is being used 
+const appRoutes: Routes = [
+  {
+    path: "",
+    component: DataComponent
+  },
+  {
+    path: "starwars",
+    component: StarwarsComponent
+  }
+]
 
 @NgModule({
 
@@ -29,7 +41,8 @@ import { StarwarsService } from "./services/starwars.service"
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes),
   ],
 
   //services

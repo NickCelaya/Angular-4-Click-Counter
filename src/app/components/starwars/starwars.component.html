@@ -1,26 +1,32 @@
-
-  <section>
-    <p class="banner">
-      StarWars works!
-    </p>
-  </section>
+<section>
+  <p class="banner">
+    StarWars works!
+  </p>
+</section>
 
 <div class="container">
 
-  <input type="text" [(ngModel)] = "person">
-  
+  <input type="text" [(ngModel)]="person">
+
   <p>Your name is: {{person}}</p>
 
   <br>
-  
+
+  <p>number: {{num}}</p>
+  <br>
+  <button (click)="increase()">click me</button>
+  <button (click)="reset()">Reset</button>
+  <button (click)="double()">double number</button>
+
+  <br>
+  <br>
+
   <p>{{response[0].name}}</p>
   <p>{{response[1].name}}</p>
+  <p>{{response[2].name}}</p>
 
   <br>
 
   <h6 *ngFor="let planet of response">{{planet.name}}</h6>
 
 </div>
-
-
-
