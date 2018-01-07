@@ -18,7 +18,7 @@ import { StarwarsService } from "./services/starwars.service";
 //routes.. app routes comes from imports array where RouterModule is being used 
 const appRoutes: Routes = [
   {
-    path: "",
+    path: "data",
     component: DataComponent
   },
   {
