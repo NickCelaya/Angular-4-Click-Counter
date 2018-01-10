@@ -10,10 +10,12 @@ import { AppComponent } from './app.component';
 import { VideoListComponent } from './components/video-list/video-list.component';
 import { DataComponent } from './components/data/data.component';
 import { StarwarsComponent } from './components/starwars/starwars.component';
+import { SoccerTeamsComponent } from './components/soccer-teams/soccer-teams.component';
 
 //services
 import { DataService } from "./services/data.service";
 import { StarwarsService } from "./services/starwars.service";
+
 
 //routes.. app routes comes from imports array where RouterModule is being used 
 const appRoutes: Routes = [
@@ -24,6 +26,10 @@ const appRoutes: Routes = [
   {
     path: "starwars",
     component: StarwarsComponent
+  },
+  {
+    path: "soccer",
+    component: SoccerTeamsComponent
   }
 ]
 
@@ -35,6 +41,7 @@ const appRoutes: Routes = [
     VideoListComponent,
     DataComponent,
     StarwarsComponent,
+    SoccerTeamsComponent,
   ],
 
   //modules
